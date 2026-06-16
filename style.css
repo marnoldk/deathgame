@@ -1,152 +1,222 @@
-
-*{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+* {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+body {
+  background-color: #f5f5f0;
+}
+
+/* ── HEADER ── */
 header {
-    background-color: rgb(206, 212, 183);
+  background-color: rgb(206, 212, 183);
+  text-align: center;
+  padding: 20px;
 }
-h1.view{
-    background-color: whitesmoke;
-    color: rgb(20, 28, 41);
-    font-style: italic;
-    font-weight: bold;
-    text-align: center;
-    background-image: ;
-}
-#allofus {
-    position: relative;
-    left: 15%;
-    padding: 10px 50px;
-    border: 5px none brown;
-    border-radius: 100px;
 
+h1.view {
+  background-color: whitesmoke;
+  color: rgb(20, 28, 41);
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px;
+  letter-spacing: 2px;
 }
+
+#allofus {
+  display: block;
+  margin: 15px auto;
+  max-width: 90%;
+  width: 800px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+  border: 4px solid brown;
+}
+
+/* ── NAV ── */
+nav {
+  background-color: #1e1e2e;
+  padding: 10px 20px;
+  overflow: hidden;
+}
+
+p.home {
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  padding: 6px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
 p.home:hover {
-    background-color: brown;
+  background-color: brown;
 }
-h2.run{
-    color: blue;
-    float: left;
+
+ul.run {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
 }
-section.marnoldk{
-    margin: 3% 10%;
-    padding: 10px 50px;
-    width: 80%;  
+
+ul.run li a {
+  color: #aad4f5;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
 }
-#first {
-    border-radius: 100px;
-    padding: 20px 50px;
-    border: 10px none brown;
-    float: left;
+
+ul.run li a:hover {
+  background-color: brown;
+  color: white;
 }
-.username1 {
-   font-family: ;
-   color:rgb(149, 148, 209) ;
-   background-color:;
+
+/* ── EDITOR SECTION ── */
+section.editor {
+  margin: 30px auto;
+  max-width: 800px;
+  padding: 20px 30px;
+  background-color: white;
+  border-left: 5px solid brown;
+  border-radius: 8px;
+  line-height: 1.7;
 }
-section.joel {
-    margin: 2% 10%;
-    padding: 10px 50px;
-    width: 80%;  
+
+section.editor h2 {
+  margin-bottom: 10px;
+  color: #1e1e2e;
 }
-#second {
-    border-radius: 80px;
-    padding: 20px 50px;
-    border: 10px none brown;
-    float: right;
-    position: relative;
-    top:30px ;
-    right: 3%;
+
+/* ── PERSON CARDS ── */
+.person {
+  margin: 30px auto;
+  max-width: 860px;
+  padding: 20px 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
 }
-.username2 {
-    font-family: ;
-    color:rgb(58, 184, 58) ;
-    background-color: ;
+
+/* All profile pictures — same size and shape */
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+  border: 4px solid brown;
+  display: block;
 }
-section.Innocent{
-    margin: 2% 10%;
-    padding: 10px 50px;
-    width: 80%; 
+
+/* Left layout: image floats left */
+.left-layout .profile-pic {
+  float: left;
+  margin: 0 25px 15px 0;
 }
-#third{
-    border-radius: 100px;
-    padding: 20px 50px;
-    border: 10px none brown;
-    float: left;
+
+/* Right layout: image floats right */
+.right-layout .profile-pic {
+  float: right;
+  margin: 0 0 15px 25px;
 }
-.username3 {
-    font-family: ;
-    color: rgb(143, 84, 84);
-    background-color: ;
+
+.clear {
+  clear: both;
 }
-section.Kayesu{
-    margin: 2% 10%;
-    padding: 10px 50px;
-    width: 80%; 
+
+/* ── QUOTE TEXT ── */
+.username {
+  line-height: 1.7;
+  font-size: 15px;
+  padding-top: 10px;
 }
-#fourth{ border-radius: 80px;
-    padding: 20px 50px;
-    border: 10px none brown;
-    float: right;
-    position: relative;
-    top:20px ;
-    right: 3%;
+
+.username strong {
+  font-size: 17px;
+  display: block;
+  margin-bottom: 6px;
 }
-.username4 {
-    font-family: ;
-    color: rgb(83, 79, 79);
-    background-color: ;
+
+.username1 { color: rgb(100, 99, 180); }
+.username2 { color: rgb(34, 139, 34); }
+.username3 { color: rgb(143, 84, 84); }
+.username4 { color: rgb(83, 79, 79); }
+.username5 { color: rgb(180, 20, 20); }
+.username6 { color: rgb(40, 40, 180); }
+.username7 { color: rgb(0, 180, 180); }
+
+/* ── CONTACTS ── */
+.contacts {
+  margin: 40px auto;
+  max-width: 860px;
+  padding: 20px 30px;
+  background-color: #1e1e2e;
+  color: white;
+  border-radius: 12px;
+  text-align: center;
 }
-section.Bushirah{
-    margin:2% 10% 5% 10%;
-    padding: 10px 50px;
-    width: 80%; 
+
+.contacts button {
+  background-color: brown;
+  color: white;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 12px;
 }
-#fifth{
-     border-radius: 100px;
-     height: 50%;
-    padding: 20px 50px;
-    border: 10px none brown;
-    float: left;
+
+.contacts button h3 {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: 1px;
 }
-.username5 {
-    font-family: ;
-    color:rgb(219, 15, 15) ;
-    background-color: ;
+
+.contacts ul {
+  list-style: none;
+  font-size: 15px;
+  line-height: 2;
 }
-section.Diana{
-    margin: 2% 10%;
-    padding: 10px 50px;
-    width: 80%;
- }
-#sixth {
-     border-radius: 80px;
-    padding: 20px 50px;
-    border: 10px none brown;
-    float: right;
-    position: relative;
-    top:20px ;
-    right: 3%;
+
+.contacts a {
+  color: #aad4f5;
+  text-decoration: none;
 }
-.username6 {
-    font-family: ;
-    color: rgb(52, 52, 187);
-    background-color: ;
+
+.contacts a:hover {
+  text-decoration: underline;
 }
-section.Bruno{ margin: 2% 10%;
-    padding: 10px 50px;
-    width: 80%; 
-    border: 50px;
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  #allofus {
+    width: 100%;
+    height: 200px;
+  }
+
+  .profile-pic {
+    float: none !important;
+    margin: 0 auto 15px auto !important;
+  }
+
+  .username {
+    text-align: center;
+  }
+
+  ul.run {
+    flex-direction: column;
+    gap: 6px;
+  }
 }
-    .username7 {
-        font-family: ;
-        color: rgb(8, 240, 240);
-        background-color: ;
-    }
-    #seventh{
-        border-radius: 100px;
-        padding: 20px 50px;
-        border: 10px none brown;
-        float: left;
-    }
